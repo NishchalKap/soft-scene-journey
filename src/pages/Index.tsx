@@ -12,7 +12,7 @@ import clayConfusion from '@/assets/clay-confusion.png';
 import clayDoctor from '@/assets/clay-doctor.png';
 import clayDashboard from '@/assets/clay-dashboard.png';
 import clayReport from '@/assets/clay-report.png';
-import clayMortar from '@/assets/clay-mortar.png';
+
 import sattvaLogo from '@/assets/sattva-logo.png';
 
 function FloatingOrb({ className = '' }: { className?: string }) {
