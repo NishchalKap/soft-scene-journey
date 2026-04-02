@@ -18,9 +18,9 @@ function FloatingOrb({ className = '' }: { className?: string }) {
   );
 }
 
-function ClayCard({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+function ClayCard({ children, className = '', style }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   return (
-    <div className={`clay-surface-lg p-6 md:p-8 ${className}`}>
+    <div className={`clay-surface-lg p-6 md:p-8 ${className}`} style={style}>
       {children}
     </div>
   );
