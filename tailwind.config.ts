@@ -13,7 +13,17 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
+        serif: ['DM Serif Display', 'serif'],
+      },
       colors: {
+        clay: {
+          cream: 'hsl(40, 33%, 96%)',
+          sage: 'hsl(143, 25%, 55%)',
+          warm: 'hsl(20, 50%, 70%)',
+          soft: 'hsl(30, 30%, 90%)',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
