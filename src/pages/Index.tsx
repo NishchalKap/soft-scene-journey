@@ -232,9 +232,12 @@ export default function Index() {
             />
             <p className="font-serif text-2xl md:text-3xl text-foreground">Sattva</p>
             <p className="scene-subtext italic">विचार से उपचार</p>
-            <button className="clay-surface-lg px-10 py-4 text-lg font-medium text-primary-foreground bg-primary hover:scale-105 transition-transform duration-300 cursor-pointer">
-              Start with clarity
-            </button>
+            <a
+              href="#"
+              className="inline-block mt-2 px-12 py-5 rounded-2xl text-lg font-semibold bg-primary text-primary-foreground shadow-[0_8px_30px_-6px_hsl(var(--primary)/0.5)] hover:shadow-[0_12px_40px_-6px_hsl(var(--primary)/0.6)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+            >
+              Start with clarity →
+            </a>
           </div>
         </Scene>
       </section>

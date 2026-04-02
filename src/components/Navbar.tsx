@@ -5,32 +5,43 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500">
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-out">
       <div
-        className={`flex items-center gap-2 md:gap-6 px-4 md:px-8 py-2.5 rounded-full transition-all duration-500 ${
+        className={`flex items-center gap-3 md:gap-8 rounded-[2rem] transition-all duration-700 ease-out ${
           scrolled
-            ? 'bg-foreground/80 backdrop-blur-xl shadow-2xl'
-            : 'bg-foreground/60 backdrop-blur-lg shadow-lg'
+            ? 'px-5 md:px-7 py-3 bg-card/90 backdrop-blur-2xl shadow-[0_8px_40px_-8px_hsl(var(--foreground)/0.12)]'
+            : 'px-6 md:px-10 py-4 bg-card/70 backdrop-blur-xl shadow-[0_4px_24px_-4px_hsl(var(--foreground)/0.08)]'
         }`}
       >
-        <img src={sattvaLogo} alt="Sattva" className="w-8 h-8 rounded-full object-cover" />
-        <span className="font-serif text-sm md:text-base text-primary-foreground font-medium tracking-wide">
+        <img
+          src={sattvaLogo}
+          alt="Sattva"
+          className={`rounded-full object-cover transition-all duration-700 ${scrolled ? 'w-8 h-8' : 'w-10 h-10'}`}
+        />
+        <span className={`font-serif text-foreground font-medium tracking-wide transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'}`}>
           Sattva
         </span>
-        <div className="hidden sm:flex items-center gap-4 ml-2">
-          <a href="#symptoms" className="text-xs md:text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Journey</a>
-          <a href="#discovery" className="text-xs md:text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Product</a>
-          <a href="#ayurveda" className="text-xs md:text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Ayurveda</a>
+
+        <div className="hidden sm:flex items-center gap-5 ml-1">
+          <div className="w-px h-4 bg-border" />
+          <a href="#symptoms" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Journey</a>
+          <a href="#discovery" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Product</a>
+          <a href="#ayurveda" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Ayurveda</a>
         </div>
+
+        <div className="w-px h-4 bg-border hidden sm:block" />
+
         <a
           href="#cta"
-          className="ml-2 px-4 py-1.5 rounded-full text-xs md:text-sm font-medium bg-primary text-primary-foreground hover:scale-105 transition-transform"
+          className={`rounded-2xl font-medium bg-primary text-primary-foreground hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ${
+            scrolled ? 'px-4 py-1.5 text-sm' : 'px-5 py-2 text-sm'
+          }`}
         >
           Get Started
         </a>
