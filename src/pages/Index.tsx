@@ -195,14 +195,8 @@ export default function Index() {
               <img
                 src={ladyAyurveda}
                 alt="Ayurveda healing"
-                className="w-64 md:w-80 drop-shadow-2xl breathe-animation relative z-10"
+                className="w-64 md:w-80 drop-shadow-2xl breathe-animation"
                 loading="lazy" width={1280} height={720}
-              />
-              <img
-                src={clayMortar}
-                alt="Mortar and pestle"
-                className="absolute -bottom-6 -right-6 w-24 md:w-32 grind-animation opacity-80"
-                loading="lazy" width={768} height={768}
               />
             </div>
             <div className="flex-1 text-center md:text-left">
